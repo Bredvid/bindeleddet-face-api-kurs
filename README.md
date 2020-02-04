@@ -3,15 +3,11 @@
 We have stipped aways some core functionality from this app.
 It is you job to get it up and running by completing the following tasks:
 
-# 0. Clone til repo and get it running on your computer
-
-# 1. Fetch data from an api
-
-# 2. Store the fetched data in the state.
-
-# 3. Show this data by sending the desired information to <Component/> via props
-
-# 4. Add functionality to enable clicking and viewing a singel object on a new page
+    0.  Clone til repo and get it running on your computer
+    1.  Fetch data from an api
+    2.  Store the fetched data in the state.
+    3.  Show this data by sending the desired information to <Component/> via props
+    4.  Add functionality to enable clicking and viewing a singel object on a new page
 
 ## Hints
 
