@@ -1,14 +1,11 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { httpClient } from "./httpClient";
+import {Game} from "./face/Game";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+        <Game />
     </div>
   );
 }
