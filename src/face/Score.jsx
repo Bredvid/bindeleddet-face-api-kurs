@@ -2,15 +2,18 @@ import React from 'react'
 import Button from "@material-ui/core/Button/Button";
 import {rounds} from './Game'
 
-export const Score = ({score, round, photos, setGameStatus, isFetching}) => {
+export const Score = ({score, round, photos, setGameStatus}) => {
 
+    // Add all values in score state
     const getTotalScore = () => Object.values(score).reduce((a, b) => a + b);
 
+    // Increase round state
     const nextRound = () => setGameStatus({showWebcamera: true, round: round + 1})
 
     return (
         <div className={"score-page"}>
             <div className="rounds-preview">
+                {/*Show the photos taken, and their calculated score*/}
                 {photos.length > 0 && rounds.map((roundName, index) =>
                     round > index &&
                     <div key={index} className={"round"}>
@@ -18,11 +21,7 @@ export const Score = ({score, round, photos, setGameStatus, isFetching}) => {
                         {photos[index] &&
                         <img className={"preview-image"} src={photos[index]}/>
                         }
-                        {isFetching && index === round - 1 ?
-                            <p>Finner data</p>
-                            :
-                            <p>Score: {score[roundName]}</p>
-                        }
+                        <p>Score: {score[roundName]}</p>
                     </div>
                 )}
             </div>
@@ -33,11 +32,10 @@ export const Score = ({score, round, photos, setGameStatus, isFetching}) => {
             </Button>
             }
 
-            <h2>Total score: {getTotalScore()}</h2>
-
             {round === 4 &&
             <>
                 <h2>GAME OVER</h2>
+                <h2>Total score: {getTotalScore()}</h2>
                 <p>Refresh page to start over</p>
             </>}
         </div>

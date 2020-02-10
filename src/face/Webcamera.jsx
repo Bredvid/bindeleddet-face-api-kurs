@@ -19,6 +19,7 @@ export const Webcamera = ({addPhoto, round, setImageData}) => {
     const hasWebcam = navigator.getUserMedia
     const webcamRef = useRef(null);
 
+    // Capture photo
     const capture = useCallback(() => {
             const imageSrc = webcamRef.current.getScreenshot();
             if (imageSrc) {
