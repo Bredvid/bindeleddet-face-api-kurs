@@ -14,18 +14,18 @@ const videoConstraints = {
     facingMode: "user"
 };
 
-export const Webcamera = ({addPhoto, round, setImageData})  => {
+export const Webcamera = ({addPhoto, round, setImageData}) => {
 
     const hasWebcam = navigator.getUserMedia
     const webcamRef = useRef(null);
 
     const capture = useCallback(() => {
-        const imageSrc = webcamRef.current.getScreenshot();
-        if (imageSrc) {
-            addPhoto(imageSrc)
-            setImageData(b64toBlob(imageSrc.split("base64,")[1]))
-        }
-    }, [webcamRef]
+            const imageSrc = webcamRef.current.getScreenshot();
+            if (imageSrc) {
+                addPhoto(imageSrc)
+                setImageData(b64toBlob(imageSrc.split("base64,")[1]))
+            }
+        }, [webcamRef]
     )
 
     // If user does not have a webcamera
@@ -45,8 +45,8 @@ export const Webcamera = ({addPhoto, round, setImageData})  => {
         <div className="modal-wrapper">
             {hasWebcam ?
                 <div className="webcam-wrapper">
-                    { round === 1 && <p> Can you show emotions on command? </p> }
-                    <h2 className="header-modal">Round {round}: Show {rounds[round-1]}</h2>
+                    {round === 1 && <p> Can you show emotions on command? </p>}
+                    <h2 className="header-modal">Round {round}: Show {rounds[round - 1]}</h2>
                     <Webcam
                         audio={false}
                         height={450}

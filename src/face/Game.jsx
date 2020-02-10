@@ -84,11 +84,12 @@ export const Game = () => {
 
     return (
         <div className="game-wrapper">
-            {gameStatus.showWebcamera &&
-                <Webcamera addPhoto={addPhoto} round={gameStatus.round} setImageData={setImageData}/>
-            }
             <Score score={score} round={gameStatus.round} photos={photos} setGameStatus={setGameStatus}
-                   isFetching={isFetching} fetchingError={fetchingError} />
+                   isFetching={isFetching} fetchingError={fetchingError}/>
+
+            {gameStatus.showWebcamera &&
+            <Webcamera addPhoto={addPhoto} round={gameStatus.round} setImageData={setImageData}/>
+            }
         </div>
-)
+    )
 }
