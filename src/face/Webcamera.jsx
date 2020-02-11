@@ -1,4 +1,4 @@
-import React, {useCallback, useRef} from 'react'
+import React, {useRef} from 'react'
 import Webcam from "react-webcam";
 import Button from '@material-ui/core/Button';
 import {rounds} from './Game'
@@ -20,14 +20,13 @@ export const Webcamera = ({addPhoto, round, setImageData}) => {
     const webcamRef = useRef(null);
 
     // Capture photo
-    const capture = useCallback(() => {
-            const imageSrc = webcamRef.current.getScreenshot();
-            if (imageSrc) {
-                addPhoto(imageSrc)
-                setImageData(b64toBlob(imageSrc.split("base64,")[1]))
-            }
-        }, [webcamRef]
-    )
+    const capture = () => {
+        const imageSrc = webcamRef.current.getScreenshot();
+        if (imageSrc) {
+            addPhoto(imageSrc)
+            setImageData(b64toBlob(imageSrc.split("base64,")[1]))
+        }
+    }
 
     // If user does not have a webcamera
     const onUpload = event => {
@@ -50,10 +49,10 @@ export const Webcamera = ({addPhoto, round, setImageData}) => {
                     <h2 className="header-modal">Round {round}: Show {rounds[round - 1]}</h2>
                     <Webcam
                         audio={false}
-                        height={450}
+                        height={400}
                         ref={webcamRef}
                         screenshotFormat="image/jpeg"
-                        width={800}
+                        width={700}
                         videoConstraints={videoConstraints}
                     />
 

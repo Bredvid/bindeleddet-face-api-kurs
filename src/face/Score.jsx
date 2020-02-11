@@ -19,7 +19,7 @@ export const Score = ({score, round, photos, setGameStatus}) => {
                     <div key={index} className={"round"}>
                         <p>{roundName}</p>
                         {photos[index] &&
-                        <img className={"preview-image"} src={photos[index]}/>
+                        <img alt="" className={"preview-image"} src={photos[index]}/>
                         }
                         <p>Score: {score[roundName]}</p>
                     </div>

@@ -3,6 +3,7 @@ import {Webcamera} from "./Webcamera";
 import {Score} from "./Score";
 
 const subscriptionKey = '' //secret: 7661167634b1cb907b70340da6cdb
+const API_URL = 'https://face-api-bredvid.cognitiveservices.azure.com/'
 
 
 export const rounds = ['happiness', 'anger', 'sadness', 'surprise'];
@@ -47,16 +48,18 @@ export const Game = () => {
         }
     }
 
-    // ImageData is a photo converted into a blob ready for the api request
+    // ImageData is a photo converted into a blob, ready for api request
     const [imageData, setImageData] = useState("")
 
     return (
         <div className="game-wrapper">
+
             <Score score={score} round={gameStatus.round} photos={photos} setGameStatus={setGameStatus}/>
 
             {gameStatus.showWebcamera &&
             <Webcamera addPhoto={addPhoto} round={gameStatus.round} setImageData={setImageData}/>
             }
+
         </div>
     )
 }
