@@ -6,13 +6,15 @@ Klon appen ved å skrive <br/>
 i din terminal eller kommandolinje.
 
 Gå inn i mappen `cd bindeleddet2020`
+
 Installer pakker og avhengigheter med `yarn`
 
 ## Running
 
 Sjekk at nøkkelen stemmer.
 
-Start appen med `yarn start`
+Start appen med `yarn start`. 
+
 Appen kjører på http://localhost:3000
 
 Send meg gjerne en epost på torjus.h.saethre@bredvid.no skulle du ha spørsmål om dette eller Bredvid!
