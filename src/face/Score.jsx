@@ -1,8 +1,9 @@
 import React from 'react'
 import Button from "@material-ui/core/Button/Button";
 import {rounds} from './Game'
+import {LoadingIcon} from "../LoadingIcon"
 
-export const Score = ({score, round, photos, setGameStatus}) => {
+export const Score = ({score, round, photos, setGameStatus, isFetching}) => {
 
     // Add all values in score state
     const getTotalScore = () => Object.values(score).reduce((a, b) => a + b);
@@ -21,7 +22,11 @@ export const Score = ({score, round, photos, setGameStatus}) => {
                         {photos[index] &&
                         <img alt="" className={"preview-image"} src={photos[index]}/>
                         }
-                        <p>Score: {score[roundName]}</p>
+                        {isFetching && (index === round - 1) ? // Hvis vi holder på å hente data for den gjeldende runden, vis lasteikon
+                            <LoadingIcon loadingText={"Stjeler ansikt"}/> // neida
+                            :
+                            <p>Score: {score[roundName]}</p>
+                        }
                     </div>
                 )}
             </div>
