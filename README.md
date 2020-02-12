@@ -16,4 +16,8 @@ Start the app `yarn start` and see if it is running on http://localhost:3000
 
 ## Misc
 
-We are very nice people - ask us for help if your stuck!
+Feilkode `401 (PermissionDenied)` skyldes trolig at du har feil subscription key eller url.
+
+*NB: Vi kommer til å endre key'en etterhvert, men dere kan helt gratis sette opp deres eget face API her: https://azure.microsoft.com/nb-no/services/cognitive-services/face/*
+
+Send meg gjerne en epost på torjus.h.saethre@bredvid.no skulle du ha spørsmål!
