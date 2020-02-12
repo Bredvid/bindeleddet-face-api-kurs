@@ -2,10 +2,10 @@
 
 ## Downloading
 Klon appen ved å skrive <br/>
-`git clone https://github.com/Bredvid/bindeleddet2020.git` <br/>
+`git clone https://github.com/Bredvid/bindeleddet-face-api-kurs.git` <br/>
 i din terminal eller kommandolinje.
 
-Gå inn i mappen `cd bindeleddet2020`
+Gå inn i mappen `cd bindeleddet-face-api-kurs`
 
 Installer pakker og avhengigheter med `yarn`
 
