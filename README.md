@@ -1,18 +1,21 @@
 # NTNU x Bredvid
 
 ## Downloading
-Clone the app by typing <br/>
+Klon appen ved å skrive <br/>
 `git clone https://github.com/Bredvid/bindeleddet2020.git` <br/>
-in your terminal or command line.
+i din terminal eller kommandolinje.
 
-Enter the folder `cd bindeleddet2020`
-
-Install dependencies by running `yarn`
+Gå inn i mappen `cd bindeleddet2020`
+Installer pakker og avhengigheter med `yarn`
 
 ## Running
 
-Start the app `yarn start` and see if it is running on http://localhost:3000
+Sjekk at nøkkelen stemmer.
 
+Start appen med `yarn start`
+Appen kjører på http://localhost:3000
+
+Send meg gjerne en epost på torjus.h.saethre@bredvid.no skulle du ha spørsmål om dette eller Bredvid!
 
 ## Misc
 
@@ -20,4 +23,5 @@ Feilkode `401 (PermissionDenied)` skyldes trolig at du har feil subscription key
 
 *NB: Vi kommer til å endre key'en etterhvert, men dere kan helt gratis sette opp deres eget face API her: https://azure.microsoft.com/nb-no/services/cognitive-services/face/*
 
-Send meg gjerne en epost på torjus.h.saethre@bredvid.no skulle du ha spørsmål!
+Husk da å endre både `API_URL` og `subscriptionKey`
+
